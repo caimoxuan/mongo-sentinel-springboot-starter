@@ -43,7 +43,7 @@ public class SentinelAutoConfiguration {
 
        log.info("start auto config mongo sentinel props: {} ", properties);
         if(properties == null){
-            log.info("can not config mongo case properties is null");
+            log.error("can not config mongo case properties is null");
             return new MongoClient(SentinelProperties.DEFAULT_HOST, SentinelProperties.DEFAULT_PORT);
         }
 
